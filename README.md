@@ -16,6 +16,14 @@ This course covers the fundamentals of LangGraph through practical Jupyter noteb
 | [`Graph/ConditionalGraph.ipynb`](Graph/ConditionalGraph.ipynb) | **Conditional Graph** | Routing, conditional edges, decision nodes |
 | [`Graph/loopingGraph.ipynb`](Graph/loopingGraph.ipynb) | **Looping Graph** | Cycles, loops, conditional continuation |
 
+## 🤖 AI Agents
+
+| Agent | File | Description |
+|-------|------|-------------|
+| **BasicAIBot** | [`AI Agent/BasicAIBot/agent1.py`](AI Agent/BasicAIBot/agent1.py) | Simple LangGraph agent with basic conversation |
+| **MemoryAgent** | [`AI Agent/MemoryAgent/agent2.py`](AI Agent/MemoryAgent/agent2.py) | Agent with conversation memory/history |
+| **ReActAgent** | [`AI Agent/ReActAgent/agent3.py`](AI Agent/ReActAgent/agent3.py) | ReAct (Reasoning + Acting) agent with tool use |
+
 ## 🚀 Getting Started
 
 ### Prerequisites
