@@ -20,9 +20,28 @@ This course covers the fundamentals of LangGraph through practical Jupyter noteb
 
 | Agent | File | Description |
 |-------|------|-------------|
-| **BasicAIBot** | [`AI Agent/BasicAIBot/agent1.py`](AI Agent/BasicAIBot/agent1.py) | Simple LangGraph agent with basic conversation |
-| **MemoryAgent** | [`AI Agent/MemoryAgent/agent2.py`](AI Agent/MemoryAgent/agent2.py) | Agent with conversation memory/history |
-| **ReActAgent** | [`AI Agent/ReActAgent/agent3.py`](AI Agent/ReActAgent/agent3.py) | ReAct (Reasoning + Acting) agent with tool use |
+| **BasicAgent** | [`BasicAIBot/agent1.py`](AI Agent/BasicAIBot/agent1.py) | Simple LangGraph agent with basic conversation |
+| **MemoryAgent** | [`MemoryAgent/agent2.py`](AI Agent/MemoryAgent/agent2.py) | Agent with conversation memory/history |
+| **ReActAgent** | [`ReActAgent/agent3.py`](AI Agent/ReActAgent/agent3.py) | ReAct (Reasoning + Acting) agent with tool use |
+| **Drafter** | [`Drafter/agent4.py`](AI Agent/Drafter/agent4.py) | Document drafting agent with update/save tools |
+| **RAGAgent** | [`RAG/agent5.py`](AI Agent/RAG/agent5.py) | RAG agent with PDF retrieval (Stock Market 2024) |
+
+### Agent Details
+
+#### **Drafter (Agent 4)**
+A document drafting assistant that helps users create and modify documents using two tools:
+- **Update Tool**: Modify document content
+- **Save Tool**: Save document to a text file
+
+Uses LangGraph with a ReAct-style pattern where the agent decides when to use tools, with conditional routing to continue or end the conversation after saving.
+
+#### **RAG Agent (Agent 5)**
+A Retrieval-Augmented Generation agent that answers questions about **Stock Market Performance 2024** using a PDF document. Features:
+- **PDF Processing**: Loads and chunks PDF using PyPDFLoader and RecursiveCharacterTextSplitter
+- **Vector Store**: Uses ChromaDB with OpenAI embeddings (text-embedding-3-small)
+- **Retriever Tool**: Searches relevant document chunks for user queries
+- **LangGraph Architecture**: LLM node + Retriever node with conditional edges for tool use
+- **Citations**: Cites specific document sources in responses
 
 ## 🚀 Getting Started
 
